@@ -32,6 +32,17 @@ Execute the command below again to create users, when user is created it will gi
 ## Openvpn Installation
 
 After login execute commands below for openvpn  installation : 
+
     $ curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
     $ chmod +x openvpn-install.sh
     $ sudo ./openvpn-install.sh
+
+Also you need to allow incoming wireguard requests to the server  on the oracle cloud portal. 
+
+Go to  --> Networking - Virtual Cloud Networks - select your network - on the left menu select  "security-list" e and  default security list  - ingress rules - add ingress rules 
+Allow  source ip "::/0" and dest port "?" for udp
+
+
+Execute the command below again to create users, when user is created it will give you a barcode directly: 
+
+    $ sudo ./openvpn-install.sh 
