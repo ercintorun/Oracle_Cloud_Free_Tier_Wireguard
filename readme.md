@@ -22,6 +22,7 @@ Also you need to allow incoming wireguard requests to the server  on the oracle 
 
 Go to  --> Networking - Virtual Cloud Networks - select your network - on the left menu select  "security-list" e and  default security list  - ingress rules - add ingress rules 
 Allow  source ip "::/0" and dest port "51820" for udp
+![Ingress_Fw_Rule](ingress_fw_rule.png) 
 
 Execute the command below again to create users, when user is created it will give you a barcode directly: 
 
