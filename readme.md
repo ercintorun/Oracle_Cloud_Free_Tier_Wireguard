@@ -7,6 +7,8 @@ On main screen launch resource - create a vm instance.
 You should continue with the default tiers except the image, select ubuntu 24. It might write 1.85 euros for boot volume, but it is calculating wrong, just continue. 
 Do not forget to save private ssh key, you will login to your server with user "ubuntu" and the private key. 
 
+Some operators are blocking wireguard, if that is the case, use openvpn. 
+
 ## Wireguard Installation
 
 After login execute commands below for wireguard installation : 
@@ -45,4 +47,6 @@ Allow  source ip "::/0" and dest port "?" for udp
 
 Execute the command below again to create users, when user is created it will give you a barcode directly: 
 
-    $ sudo ./openvpn-install.sh 
+    $ sudo ./openvpn-install.sh
+
+For more info check: https://github.com/angristan/openvpn-install 
