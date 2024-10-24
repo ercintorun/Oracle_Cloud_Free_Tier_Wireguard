@@ -44,13 +44,15 @@ After login execute commands below for openvpn  installation :
 ![openvpn2](openvpn2.png) 
 ![openvpn3](openvpn3.png) 
 
+Download the ovpn file and import in your client. 
+
 Also you need to allow incoming openvpn requests to the server  on the oracle cloud portal. 
 
 Go to  --> Networking - Virtual Cloud Networks - select your network - on the left menu select  "security-list" e and  default security list  - ingress rules - add ingress rules 
 Allow  source ip "::/0" and dest port "49548" for udp example (you need to check your port during installation)
+![OpenVpn_Fw_Rule](openvpn_fw_rule.png) 
 
-
-Execute the command below again to create users, when user is created it will give you a barcode directly: 
+Execute the command below again to create additional users etc. 
 
     sudo ./openvpn-install.sh
 
