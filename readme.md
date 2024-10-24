@@ -9,7 +9,7 @@ Do not forget to save private ssh key, you will login to your server with user "
 
 
 
-After login execute commands below: 
+After login execute commands below for wireguard installation : 
 
     $ curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
     $ chmod +x wireguard-install.sh
@@ -18,10 +18,16 @@ After login execute commands below:
 ![Wireguard_config](wireguard_config.png) 
 You need to enter your servers assigned public address to the "public address" section. 
 
-Also you need to allow incoming wireguard requests to the server  on the oracle cloud portal. 
+After login execute commands below for openvpn  installation : 
+    $ curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+    $ chmod +x openvpn-install.sh
+    $ sudo ./openvpn-install.sh
+
+
+Also you need to allow incoming wireguard/openvpn requests to the server  on the oracle cloud portal. 
 
 Go to  --> Networking - Virtual Cloud Networks - select your network - on the left menu select  "security-list" e and  default security list  - ingress rules - add ingress rules 
-Allow  source ip "::/0" and dest port "51820" for udp
+Allow  source ip "::/0" and dest port "51820" (for our example) for udp
 ![Ingress_Fw_Rule](ingress_fw_rule.png) 
 
 Execute the command below again to create users, when user is created it will give you a barcode directly: 
