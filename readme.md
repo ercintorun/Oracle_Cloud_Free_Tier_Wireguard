@@ -7,7 +7,7 @@ On main screen launch resource - create a vm instance.
 You should continue with the default tiers except the image, select ubuntu 24. It might write 1.85 euros for boot volume, but it is calculating wrong, just continue. 
 Do not forget to save private ssh key, you will login to your server with user "ubuntu" and the private key. 
 
-Some operators are blocking wireguard, if that is the case, use openvpn. 
+***Some operators are blocking wireguard using DPI, if that is the case, use openvpn.***
 
 ## Wireguard Installation
 
